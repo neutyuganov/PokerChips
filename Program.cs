@@ -152,7 +152,7 @@ namespace PokerChips
                 }
 
                 var str = string.Join(" ", arrayChips);
-                Console.WriteLine(str + "\t" + countCorrectChips + "\t" + countSteps);            
+                Console.WriteLine(str);            
             }
 
             Console.WriteLine("Count steps: {0}", countSteps.ToString());
