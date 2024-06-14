@@ -41,9 +41,10 @@ namespace PokerChips
             for (int i = 1; countCorrectChips != arrayChips.Length; i++)
             {
                 int indexMax = 0;
+                countCorrectChips = 0;
 
                 // Узнаем индекс нахождения максимального числа в массиве
-                for(int j = 0; j < arrayChips.Length; j++)
+                for (int j = 0; j < arrayChips.Length; j++)
                 {
                     if (arrayChips[j] == arrayChips.Max())
                     {
@@ -142,17 +143,17 @@ namespace PokerChips
                         }                       
                     }
                 }
+               
 
                 countSteps++;
 
                 for (int j = 0; j < arrayChips.Length; j++)
                 {
-                    if (arrayChips[j] == avgChips) countCorrectChips++;
-                    else countCorrectChips = 0;
+                    if (arrayChips[j] == avgChips) countCorrectChips++;                 
                 }
 
                 var str = string.Join(" ", arrayChips);
-                Console.WriteLine(str);            
+                Console.WriteLine(str+"\t"+ countCorrectChips);            
             }
 
             Console.WriteLine("Count steps: {0}", countSteps.ToString());
